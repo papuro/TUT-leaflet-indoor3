@@ -42,7 +42,7 @@
             });
         map = new L.Map('map', {
             layers: [osm],
-            center: new L.LatLng(49.41873, 8.67689),
+            center: new L.LatLng(35.65468, 139.33897),
             zoom: 19
         });
         // This example uses OpenStreetMap data, fetched from the OverpassAPI,
@@ -51,7 +51,7 @@
         // 1370729 is the OSM ID for the relation of the building used in this
         // example, it can be viewed online here:
         //   http://www.openstreetmap.org/relation/1370729
-        var query = '(relation(1370729);>>->.rels;>;);out;';
+        var query = '(relation(5688194);>>->.rels;>;);out;';
         $.get("//overpass-api.de/api/interpreter?data=" + query, function(data) {
             var geoJSON = osmtogeojson(data, {
                 polygonFeatures: {
